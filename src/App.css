@@ -1,38 +1,74 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: white;
+  font-family: 'Questrial', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  color: white;
+  font-family: 'Questrial', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  color: white;
+  font-family: 'Questrial', sans-serif;
+}
+
+text {
+  color: white;
+  font-family: 'Questrial', sans-serif;
+}
+
+.splash-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  height: 70vh;
+  width: 100vw;
+}
+
+.bottom-row {
+  display: flex;
+  flex-direction: row;
+  height: 30vh;
+}
+
+.piano-container {
+  width:50vw;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.master-volume-container {
+  height: fit-content;
+  max-width: auto;
+  border: white 1px;
+  border-style: solid;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.value {
+  z-index: -1;
+  font-family: 'Questrial', sans-serif;
+  fill: white;
+  font-size: 35px;
 }

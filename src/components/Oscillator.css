@@ -1,0 +1,59 @@
+.oscillator-container {
+    max-width: auto;
+    border: white 1px;
+    border-style: solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.oscillator-title {
+    margin: 15px
+}
+
+
+.oscillator-tune-container {
+    height: 150px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.oscillator-type-container {
+    height: 150px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.oscillator-vol-container {
+    height: 150px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.styledKnob circle,
+.styledKnob path {
+    fill: #39cfc8;
+    opacity: 0.4;
+    transition: opacity 100ms, color 100ms ease-in-out;
+}
+
+.styledKnob rect {
+  fill: white;
+  opacity: 1;
+}
+
+.styledKnob:hover circle,
+.styledKnob:hover path,
+.styledKnob:focus circle,
+.styledKnob:focus path {
+    fill: #180094;
+    opacity: 1;
+    transition: 
+    opacity 450ms, 
+    color 450ms 
+    ease-in-out;
+}
