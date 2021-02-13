@@ -88,7 +88,7 @@ const Delay = () => {
                 {/* Set the value of .frequency element to be the frequency of the selected oscillator
                 and add onChange handler to change the frequency of selectedOscillatorNode */}
                 <div className="oscillator-tune-container">
-                    <h3>TIME</h3>
+                    <h3 className={"oscillator-title-small"}>TIME</h3>
                     <Knob
                         onChange={updateDelayTime}
                         unlockDistance={10}
@@ -103,7 +103,7 @@ const Delay = () => {
                 {/* Set the value of .wave-type element to be the type of the selected oscillator
                 and add onChange handler to change the type of selectedOscillatorNode */}
                 <div className="oscillator-tune-container">
-                    <h3>FEEDBACK</h3>
+                    <h3 className={"oscillator-title-small"}>FEEDBACK</h3>
                     <Knob
                         onChange={updateDelayFeedback}
                         unlockDistance={10}
@@ -116,7 +116,7 @@ const Delay = () => {
                 </div>
     
                 <div className="oscillator-vol-container">
-                    <h3>CUTOFF</h3>
+                    <h3 className={"oscillator-title-small"}>CUTOFF</h3>
                     {/* Set the value of .oscillator-volume element to be the gain value of the selected oscillator's GainNode
                     and add onChange handler to change the gain of selectedOscillatorNode */}
                     <Knob

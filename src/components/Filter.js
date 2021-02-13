@@ -94,7 +94,7 @@ const Filter = () => {
                 {/* Set the value of .frequency element to be the frequency of the selected oscillator
                 and add onChange handler to change the frequency of selectedOscillatorNode */}
                 <div className="oscillator-tune-container">
-                    <h3>CUTOFF</h3>
+                    <h3 className={"oscillator-title-small"}>CUTOFF</h3>
                     <Knob
                         onChange={updateFrequency}
                         unlockDistance={10}
@@ -109,7 +109,7 @@ const Filter = () => {
                 {/* Set the value of .wave-type element to be the type of the selected oscillator
                 and add onChange handler to change the type of selectedOscillatorNode */}
                 <div className="oscillator-tune-container">
-                    <h3>RES</h3>
+                    <h3 className={"oscillator-title-small"}>RES</h3>
                     <Knob
                         onChange={updateQ}
                         unlockDistance={10}
@@ -122,7 +122,7 @@ const Filter = () => {
                 </div>
     
                 <div className="oscillator-vol-container">
-                    <h3>TYPE</h3>
+                    <h3 className={"oscillator-title-small"}>TYPE</h3>
                     {/* Set the value of .oscillator-volume element to be the gain value of the selected oscillator's GainNode
                     and add onChange handler to change the gain of selectedOscillatorNode */}
                     <Knob

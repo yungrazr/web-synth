@@ -4,6 +4,7 @@ import Audio from './components/Audio'
 import Oscillator from './components/Oscillator'
 import Delay from './components/Delay'
 import Filter from './components/Filter'
+import Reverb from './components/Reverb'
 import { Knob } from "react-rotary-knob";
 import { Piano, KeyboardShortcuts, MidiNumbers } from 'react-piano';
 import 'react-piano/dist/styles.css';
@@ -108,6 +109,7 @@ const App = () => {
                     <Oscillator oscNum={3} play={playNote} />
                     <Filter />
                     <Delay />
+                    <Reverb />
                     {MasterVolume()}
                 </div>
                 <div className="bottom-row">
