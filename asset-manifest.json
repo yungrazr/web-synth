@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/web-synth/static/css/main.2870f5e5.chunk.css",
-    "main.js": "/web-synth/static/js/main.09974409.chunk.js",
-    "main.js.map": "/web-synth/static/js/main.09974409.chunk.js.map",
-    "runtime-main.js": "/web-synth/static/js/runtime-main.3bfa5441.js",
-    "runtime-main.js.map": "/web-synth/static/js/runtime-main.3bfa5441.js.map",
+    "main.css": "/web-synth/static/css/main.ebaa63e4.chunk.css",
+    "main.js": "/web-synth/static/js/main.8ae48847.chunk.js",
+    "main.js.map": "/web-synth/static/js/main.8ae48847.chunk.js.map",
+    "runtime-main.js": "/web-synth/static/js/runtime-main.4b533b8d.js",
+    "runtime-main.js.map": "/web-synth/static/js/runtime-main.4b533b8d.js.map",
     "static/css/2.7601d764.chunk.css": "/web-synth/static/css/2.7601d764.chunk.css",
-    "static/js/2.2c082966.chunk.js": "/web-synth/static/js/2.2c082966.chunk.js",
-    "static/js/2.2c082966.chunk.js.map": "/web-synth/static/js/2.2c082966.chunk.js.map",
-    "static/js/3.46b20122.chunk.js": "/web-synth/static/js/3.46b20122.chunk.js",
-    "static/js/3.46b20122.chunk.js.map": "/web-synth/static/js/3.46b20122.chunk.js.map",
+    "static/js/2.9bf2fc59.chunk.js": "/web-synth/static/js/2.9bf2fc59.chunk.js",
+    "static/js/2.9bf2fc59.chunk.js.map": "/web-synth/static/js/2.9bf2fc59.chunk.js.map",
+    "static/js/3.7382aa79.chunk.js": "/web-synth/static/js/3.7382aa79.chunk.js",
+    "static/js/3.7382aa79.chunk.js.map": "/web-synth/static/js/3.7382aa79.chunk.js.map",
     "index.html": "/web-synth/index.html",
     "static/css/2.7601d764.chunk.css.map": "/web-synth/static/css/2.7601d764.chunk.css.map",
-    "static/css/main.2870f5e5.chunk.css.map": "/web-synth/static/css/main.2870f5e5.chunk.css.map",
-    "static/js/2.2c082966.chunk.js.LICENSE.txt": "/web-synth/static/js/2.2c082966.chunk.js.LICENSE.txt"
+    "static/css/main.ebaa63e4.chunk.css.map": "/web-synth/static/css/main.ebaa63e4.chunk.css.map",
+    "static/js/2.9bf2fc59.chunk.js.LICENSE.txt": "/web-synth/static/js/2.9bf2fc59.chunk.js.LICENSE.txt",
+    "static/media/inter.css": "/web-synth/static/media/Inter.var.a738a131.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.3bfa5441.js",
+    "static/js/runtime-main.4b533b8d.js",
     "static/css/2.7601d764.chunk.css",
-    "static/js/2.2c082966.chunk.js",
-    "static/css/main.2870f5e5.chunk.css",
-    "static/js/main.09974409.chunk.js"
+    "static/js/2.9bf2fc59.chunk.js",
+    "static/css/main.ebaa63e4.chunk.css",
+    "static/js/main.8ae48847.chunk.js"
   ]
 }
