@@ -4,7 +4,6 @@
     position: relative;
     /* Used to lay out .ReactPiano__Key--natural elements */
     display: flex;
-    flex: 1;
 }
   
   .ReactPiano__Key {
@@ -12,16 +11,25 @@
     display: flex;
   }
 
-
-.ReactPiano__Key--active {
-    background: #f00;  /* Change the default active key color to bright red */
+.ReactPiano__Key--active.ReactPiano__Key--natural {
+  opacity: 0.8;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #3ac8da;
+  height: 98%;
 }
   
 .ReactPiano__Key--accidental {
+  -webkit-tap-highlight-color: transparent;
     background: #000;
     border: 2px solid #fff;
     border-top: 1px solid transparent;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 0px 0px 50px 50px;
     cursor: pointer;
     height: 66%;
     /* Overlay on top of natural keys */
@@ -31,8 +39,12 @@
     top: 0;
 }
 
+.ReactPiano__Key--active.ReactPiano__Key--accidental {
+  background: rgb(32, 32, 32);
+}
 
 .ReactPiano__Key--natural {
+  -webkit-tap-highlight-color: transparent;
     background: #f6f5f3;
     border: 1px solid white;
     border-radius: 50px 50px 50px 50px;

@@ -12,16 +12,22 @@ import './CustomPianoStyles.css';  // import a set of overrides
 
 const App = () => {
     const [start, setStart] = useState(false)
-    const firstNote = MidiNumbers.fromNote('c4');
+    const firstNote = MidiNumbers.fromNote('c3');
     const lastNote = MidiNumbers.fromNote('c5');
-    const keyboardShortcuts = KeyboardShortcuts.create({
-        firstNote: firstNote,
-        lastNote: lastNote,
-        keyboardConfig: KeyboardShortcuts.HOME_ROW,
-    });
+    const notes = [
+        { key: 'z', midiNumber: 48 },{ key: 's', midiNumber:49 },{ key: 'x', midiNumber: 50 },{ key: 'd', midiNumber: 51 },{ key: 'c', midiNumber: 52 },
+        { key: 'v', midiNumber: 53 },{ key: 'g', midiNumber:54 },{ key: 'b', midiNumber: 55 },{ key: 'h', midiNumber: 56 },{ key: 'n', midiNumber: 57 },
+        { key: 'j', midiNumber: 58 },{ key: 'm', midiNumber:59 },{ key: 'q', midiNumber: 60 },{ key: '2', midiNumber: 61 },{ key: 'w', midiNumber: 62 },
+        { key: '3', midiNumber: 63 },{ key: 'e', midiNumber:64 },{ key: 'r', midiNumber: 65 },{ key: '5', midiNumber: 66 },{ key: 't', midiNumber: 67 },
+        { key: '6', midiNumber: 68 },{ key: 'y', midiNumber:69 },{ key: '7', midiNumber: 70 },{ key: 'u', midiNumber: 71 },{ key: 'i', midiNumber: 72 }]
+    // const keyboardShortcuts = KeyboardShortcuts.create(notes);
 
     // [midiNumber, frequency]
     const noteFrequencies = new Map([
+        [48, 130.8], [49, 138.6], [50, 146.8],
+        [51, 155.6], [52, 164.8], [53, 174.61],
+        [54, 185], [55, 196], [56, 207.65],
+        [57, 220], [58, 233.08], [59, 246.9],
         [60, 262], [61, 277.2], [62, 293.7],
         [63, 311.2], [64, 329.7], [65, 349.3],
         [66, 370.1], [67, 392.1], [68, 415.4],
@@ -58,7 +64,7 @@ const App = () => {
                 stopNote={(midiNumber) => {
                     setPlayNote({ stopNote: midiNumber, playNote: null })
                 }}
-                keyboardShortcuts={keyboardShortcuts}
+                keyboardShortcuts={notes}
             />
         </div>)
     }
@@ -96,7 +102,7 @@ const App = () => {
         <div className="App">
             <div className="splash-screen">
                 <h1>Moms.On.My.Synth</h1>
-                <p onClick={()=>initializeMasterGain()}>Click here to start</p>
+                <p style={{"cursor": "pointer"}} onClick={()=>initializeMasterGain()}>Click here to start</p>
             </div>
         </div>);
     }

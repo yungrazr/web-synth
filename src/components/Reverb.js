@@ -119,7 +119,7 @@ const Reverb = () => {
                         value={reverb.dry} />
                     <p>{(reverb.dry).toFixed(2)}</p>
                 </div>
-                <h3 onClick={switchOnOffReverb}>{offOn? "Turn Off" : "Turn On"}</h3>
+                <h3 style={{"cursor": "pointer"}} className="oscillator-title-small" onClick={switchOnOffReverb}>{offOn? "Turn Off" : "Turn On"}</h3>
             </div>
         );
     }

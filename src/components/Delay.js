@@ -129,7 +129,7 @@ const Delay = () => {
                         value={filter.frequency} />
                     <p>{Math.round(filter.frequency)}hz</p>
                 </div>
-                <h3 onClick={switchOnOffDelay}>{offOn? "Turn Off" : "Turn On"}</h3>
+                <h3 style={{"cursor": "pointer"}} className="oscillator-title-small" onClick={switchOnOffDelay}>{offOn? "Turn Off" : "Turn On"}</h3>
             </div>
         );
     } else { 

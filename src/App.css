@@ -6,24 +6,52 @@
   background-color: black;
 }
 
+a { outline: none; }
+
+button { outline: none; }
+
 h1 {
   color: white;
   font-family: 'Questrial', sans-serif;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 h3 {
   color: white;
   font-family: 'Questrial', sans-serif;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 p {
   color: white;
   font-family: 'Questrial', sans-serif;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 text {
   color: white;
   font-family: 'Questrial', sans-serif;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 .splash-screen {
@@ -35,7 +63,6 @@ text {
 }
 
 .top-row {
-  padding: 10px;
   height: 65%;
   display: flex;
   flex-direction: row;
@@ -47,27 +74,26 @@ text {
   height: 35%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  overflow-x: auto;
 }
 
 .piano-container {
-  width: 100%;
+  width: 1000px;
+  min-width: 800px;
   height: 100%;
 }
 
 .master-volume-container {
   position: relative;
   background-color: black;
-  border: #ffffff 1px;
+  border-left: #ffffff3d 1px;
   border-style: solid;
-  border-radius: 20px;
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  margin: 10px;
+  padding: 30px;
 }
 
 .value {
