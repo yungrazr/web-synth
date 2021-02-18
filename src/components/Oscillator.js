@@ -15,7 +15,7 @@ const Oscillator = ({ oscNum, play }) => {
             // Create a GainNode for the oscillator, set it to 0 volume and connect it to masterGainNode
             const oscillatorGainNode = Audio.context.createGain()
             oscillatorGainNode.gain.setValueAtTime(0.3, Audio.context.currentTime)
-            oscillatorGainNode.connect(Audio.masterGainNode)
+            oscillatorGainNode.connect(Audio.filterGainNode)
 
             // Create OscillatorNode, connect it to its GainNode, and make it start playing.
             const oscillatorNode = Audio.context.createOscillator()

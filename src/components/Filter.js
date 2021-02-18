@@ -10,11 +10,12 @@ const Filter = () => {
     useEffect(() => {
         const initiateFilter = () => {
             let filterNode = Audio.context.createBiquadFilter();
+            Audio.filterGainNode.gain.setValueAtTime(0.5, Audio.context.currentTime)
             filterNode.frequency.value = 1000;
             filterNode.type = "lowpass";
             filterNode.Q.value = 1;
-            Audio.masterGainNode.connect(filterNode);
-            filterNode.connect(Audio.context.destination);
+            Audio.filterGainNode.connect(filterNode);
+            filterNode.connect(Audio.masterGainNode);
 
             const filterNodeValues = {
                 frequency: filterNode.frequency.value,

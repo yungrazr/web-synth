@@ -21,6 +21,10 @@ const App = () => {
         { key: '3', midiNumber: 63 },{ key: 'e', midiNumber:64 },{ key: 'r', midiNumber: 65 },{ key: '5', midiNumber: 66 },{ key: 't', midiNumber: 67 },
         { key: '6', midiNumber: 68 },{ key: 'y', midiNumber:69 },{ key: '7', midiNumber: 70 },{ key: 'u', midiNumber: 71 },{ key: 'i', midiNumber: 72 }]
     // const keyboardShortcuts = KeyboardShortcuts.create(notes);
+    const classnames = [
+        'Main',
+        start && 'Main--clicked'
+      ].filter(Boolean);
 
     // [midiNumber, frequency]
     const noteFrequencies = new Map([
@@ -45,7 +49,7 @@ const App = () => {
         Audio.masterGainNode.connect(Audio.context.destination)
 
         // Set masterGain Value to 0
-        Audio.masterGainNode.gain.setValueAtTime(0.2, Audio.context.currentTime)
+        Audio.masterGainNode.gain.setValueAtTime(0.5, Audio.context.currentTime)
     }
 
     // // initialize masterGainNode on first render
@@ -101,14 +105,14 @@ const App = () => {
         return (        
         <div className="App">
             <div className="splash-screen">
-                <h1>Moms.On.My.Synth</h1>
+                <h1>Web.Synth</h1>
                 <p style={{"cursor": "pointer"}} onClick={()=>initializeMasterGain()}>Click here to start</p>
             </div>
         </div>);
     }
     else {
         return (
-            <div className="App">
+            <div className="Main">
                 <div className="top-row">
                     <Oscillator oscNum={1} play={playNote} />
                     <Oscillator oscNum={2} play={playNote} />

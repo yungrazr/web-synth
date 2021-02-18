@@ -13,20 +13,19 @@ const Reverb = () => {
         const initiateReverb = () => 
             {
             let reverbNode = Reverb(Audio.context);
-            reverbNode.time = 5 //seconds
-            reverbNode.wet.value = 0.8
-            reverbNode.dry.value = 1
+            reverbNode.time = 3 //seconds
+            reverbNode.wet.value = 0.5
+            reverbNode.dry.value = 0
 
-            reverbNode.filterType = 'lowpass'
-            reverbNode.cutoff.value = 4000 //Hz
-            //reverbNode.connect(Audio.masterGainNode);
+            reverbNode.filterType = 'highpass'
+            reverbNode.cutoff.value = 200 //Hz
             Audio.masterGainNode.connect(reverbNode);
-            // reverbNode.connect(Audio.context.destination)
+            //reverbNode.connect(Audio.context.destination)
 
             const reverbValues = {
-                decay: 5,
-                wet: 0.8,
-                dry: 1,
+                decay: reverbNode.time,
+                wet: reverbNode.wet.value,
+                dry: reverbNode.dry.value,
                 reverbNode: reverbNode
             }
             setReverb(reverbValues);
@@ -105,10 +104,8 @@ const Reverb = () => {
                     <p>{reverb.wet.toFixed(2)}</p>
                 </div>
     
-                <div className="oscillator-vol-container">
+                {/* <div className="oscillator-vol-container">
                     <h3 className={"oscillator-title-small"}>DRY</h3>
-                    {/* Set the value of .oscillator-volume element to be the gain value of the selected oscillator's GainNode
-                    and add onChange handler to change the gain of selectedOscillatorNode */}
                     <Knob
                         onChange={updateDry}
                         unlockDistance={10}
@@ -118,7 +115,7 @@ const Reverb = () => {
                         rotateDegrees={220}
                         value={reverb.dry} />
                     <p>{(reverb.dry).toFixed(2)}</p>
-                </div>
+                </div> */}
                 <h3 style={{"cursor": "pointer"}} className="oscillator-title-small" onClick={switchOnOffReverb}>{offOn? "Turn Off" : "Turn On"}</h3>
             </div>
         );
