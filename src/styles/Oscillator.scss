@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
+  border-right: 1px solid #ffffff3d;
 }
 
 .oscillator-title {
@@ -24,6 +25,7 @@
 .oscillator-title-small {
   text-align: center;
   width: 80px;
+  z-index: 1;
   font-size: 100%;
   margin: 5px;
 }

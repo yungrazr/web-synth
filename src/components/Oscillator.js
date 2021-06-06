@@ -11,7 +11,7 @@ const Oscillator = ({ oscNum, play }) => {
   useEffect(() => {
     const oscillators = [];
     const addOscillatorNode = () => {
-      // Create a GainNode for the oscillator, set it to 0 volume and connect it to masterGainNode
+      // Create a GainNode for the oscillator, set it to 0 volume and connect it to filter
       const oscillatorGainNode = Audio.context.createGain();
       oscillatorGainNode.gain.setValueAtTime(0.3, Audio.context.currentTime);
       oscillatorGainNode.connect(Audio.filterGainNode);

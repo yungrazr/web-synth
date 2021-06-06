@@ -7,16 +7,12 @@ import Filter from "./components/Filter";
 import Reverb from "./components/Reverb";
 import AudioAnalyser from "./components/AudioAnalyser";
 import MidiInputSelector from "./components/MidiInputSelector";
-import { notes, noteFrequencies } from "./components/Notes";
-import { Knob } from "react-rotary-knob";
-import { Piano, MidiNumbers } from "react-piano";
-import "react-piano/dist/styles.css";
-import "./styles/CustomPianoStyles.scss";
+import MasterVolume from "./components/MasterVolume";
+import PianoRoll from "./components/PianoRoll";
+import { noteFrequencies } from "./components/Notes";
 
 const App = () => {
   const [start, setStart] = useState(false);
-  const firstNote = MidiNumbers.fromNote("c3");
-  const lastNote = MidiNumbers.fromNote("c5");
 
   // set state to represent initial value of masterGainNode
   const [masterGainValue, setMasterGainValue] = useState(0.5);
@@ -30,55 +26,12 @@ const App = () => {
     Audio.masterGainNode.gain.setValueAtTime(0.5, Audio.context.currentTime);
   };
 
-  const PianoRoll = () => {
-    return (
-      <div className="piano-container">
-        <Piano
-          noteRange={{ first: firstNote, last: lastNote }}
-          playNote={(midiNumber) => {
-            onKeyDown(midiNumber);
-          }}
-          stopNote={(midiNumber) => {
-            setPlayNote({ stopNote: midiNumber, playNote: null });
-          }}
-          keyboardShortcuts={notes}
-        />
-      </div>
-    );
-  };
-
-  const changeMasterVolume = (e) => {
-    setMasterGainValue(Math.round(e) / 100);
-    Audio.masterGainNode.gain.setValueAtTime(
-      Math.round(e) / 100,
-      Audio.context.currentTime
-    );
-  };
-
   const onKeyDown = (midiNumber) => {
     setPlayNote({
       playNote: midiNumber,
       frequency: noteFrequencies.get(midiNumber),
       stopNote: null,
     });
-  };
-
-  const MasterVolume = () => {
-    return (
-      <div className="master-volume-container">
-        <h1 className="oscillator-title">MASTER VOL</h1>
-        <Knob
-          onChange={changeMasterVolume}
-          unlockDistance={10}
-          preciseMode={true}
-          min={0}
-          max={100}
-          rotateDegrees={225}
-          value={masterGainValue * 100}
-        />
-        <p>{Math.round(masterGainValue * 100)}</p>
-      </div>
-    );
   };
 
   if (start === false) {
@@ -111,10 +64,13 @@ const App = () => {
           <Filter />
           <Delay />
           <Reverb />
-          {MasterVolume()}
+          <MasterVolume
+            masterGainValue={masterGainValue}
+            setMasterGainValue={setMasterGainValue}
+          />
         </div>
         <div className="bottom-row">
-          {PianoRoll()}
+          <PianoRoll setPlayNote={setPlayNote} onKeyDown={onKeyDown} />
           <AudioAnalyser />
         </div>
       </div>

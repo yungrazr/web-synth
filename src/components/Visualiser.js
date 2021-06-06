@@ -36,8 +36,8 @@ const Visualiser = ({ audioData }) => {
 
   return (
     <canvas
-      className="Visualiser"
-      width="1000px"
+      className="visualiser"
+      width="500px"
       height="500px"
       ref={canvasRef}
     />
