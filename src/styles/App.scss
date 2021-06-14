@@ -23,52 +23,36 @@
   }
 }
 
-a { outline: none; }
+a {
+  outline: none;
+}
 
-button { outline: none; }
+button {
+  outline: none;
+}
 
 h1 {
   color: white;
-  font-family: 'Questrial', sans-serif;
-  -webkit-touch-callout:none;
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
+  font-family: "Questrial", sans-serif;
+  user-select: none;
 }
 
 h3 {
   color: white;
-  font-family: 'Questrial', sans-serif;
-  -webkit-touch-callout:none;
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
+  font-family: "Questrial", sans-serif;
+  user-select: none;
 }
 
 p {
   color: white;
-  font-family: 'Questrial', sans-serif;
-  -webkit-touch-callout:none;
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
+  font-family: "Questrial", sans-serif;
+  user-select: none;
 }
 
 text {
   color: white;
-  font-family: 'Questrial', sans-serif;
-  -webkit-touch-callout:none;
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
+  font-family: "Questrial", sans-serif;
+  user-select: none;
 }
 
 .splash-screen {
@@ -77,6 +61,15 @@ text {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  animation: 1s ease-out 0s 1 fadeIn;
+  border-bottom: 1px solid #ffffff3d;
+  display: flex;
+  flex-direction: row;
 }
 
 .top-row {
@@ -89,11 +82,12 @@ text {
 
 .bottom-row {
   animation: 1s ease-out 0s 1 fadeIn;
-  padding: 10px;
+  padding: 0.5rem;
   height: 35%;
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  border-top: 1px solid #ffffff3d;
 }
 
 .piano-container {
@@ -105,8 +99,6 @@ text {
 .master-volume-container {
   position: relative;
   background-color: black;
-  border-left: #ffffff3d 1px;
-  border-style: solid;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -115,9 +107,24 @@ text {
   padding: 30px;
 }
 
+.header-item-container {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .value {
   z-index: -1;
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
   fill: white;
   font-size: 35px;
+}
+
+select {
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: black;
+  color: white;
 }
